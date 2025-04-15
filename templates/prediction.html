@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat de la prédiction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Résultat de votre prédiction</h1>
+        {% if prediction %}
+            <p class="prediction-result">{{ prediction }}</p>
+        {% else %}
+            <p>Aucune prédiction disponible.</p>
+        {% endif %}
+        <a href="/" class="back-btn">Retour à l'accueil</a>
+    </div>
+</body>
+</html>
